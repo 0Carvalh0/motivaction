@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>MotivAction</title>
+
+    <link rel="stylesheet" href="./src/styles/style.css" />
+    <script src="./src/scripts/script.js" defer></script>
+  </head>
+
+  <body
+    class="bg-gradient-to-br from-background to-gray-200 min-h-screen flex items-center justify-center font-sans"
+  >
+    <div class="container mx-auto px-4 py-8">
+      <div class="bg-white rounded-xl shadow-2xl p-8 max-w-3xl mx-auto">
+        <h1 class="text-4xl font-bold mb-8 text-center text-gray-800">
+          Gerador de Citações
+        </h1>
+        <div
+          id="quote-container"
+          class="mb-8 p-6 bg-gray-50 rounded-xl shadow-inner"
+        >
+          <p id="quote-text" class="text-2xl text-gray-700 mb-4 italic"></p>
+        </div>
+        <div class="flex justify-between mb-8">
+          <button
+            id="new-quote-btn"
+            class="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105"
+          >
+            Nova Citação
+          </button>
+          <button
+            id="save-quote-btn"
+            class="bg-secondary hover:bg-secondary-dark text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105"
+          >
+            Salvar Citação
+          </button>
+        </div>
+        <div id="saved-quotes" class="mt-12">
+          <h2 class="text-3xl font-bold mb-6 text-gray-800">Citações Salvas</h2>
+          <div
+            id="saved-quotes-list"
+            class="grid grid-cols-1 md:grid-cols-2 gap-4"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
