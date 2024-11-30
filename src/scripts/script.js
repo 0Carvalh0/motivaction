@@ -61,9 +61,9 @@ document.addEventListener("DOMContentLoaded", () => {
     savedQuotes.forEach((quote) => {
       const quoteCard = document.createElement("div");
       quoteCard.className =
-        "bg-white p-4 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105";
+        "bg-white flex items-center p-4 gap-4 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105";
       quoteCard.innerHTML = `
-                <p class="text-gray-700 mb-2">"${quote.content}"</p>
+                <p class="text-gray-700 mb-2">"${quote.content}"</p><button id="button__removeQuote"><i class="fa-solid fa-trash"></i></button>
             `;
       savedQuotesList.appendChild(quoteCard);
     });
