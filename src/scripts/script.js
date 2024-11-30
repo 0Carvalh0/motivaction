@@ -55,16 +55,30 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  document.addEventListener("click", (e) => {
+    if (e.target.closest("#delete-quote-btn").id === "delete-quote-btn") {
+      let deleteQuoteBtn = e.target.closest("#delete-quote-btn");
+      let savedQuotes = JSON.parse(localStorage.getItem("savedQuotes")) || [];
+      let quoteId = deleteQuoteBtn.parentElement.id;
+
+      savedQuotes = savedQuotes.filter((quote) => quote._id !== quoteId);
+      localStorage.setItem("savedQuotes", JSON.stringify(savedQuotes));
+
+      displaySavedQuotes();
+    }
+  });
+
   function displaySavedQuotes() {
     const savedQuotes = JSON.parse(localStorage.getItem("savedQuotes")) || [];
     savedQuotesList.innerHTML = "";
     savedQuotes.forEach((quote) => {
       const quoteCard = document.createElement("div");
+      quoteCard.id = quote._id;
       quoteCard.className =
         "bg-white flex items-center p-4 gap-4 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105";
       quoteCard.innerHTML = `
-                <p class="text-gray-700 mb-2">"${quote.content}"</p><button id="button__removeQuote"><i class="fa-solid fa-trash"></i></button>
-            `;
+      <p class="text-gray-700 mb-2">"${quote.content}"</p><button id="delete-quote-btn"><i class="fa-solid fa-trash"></i></button>
+      `;
       savedQuotesList.appendChild(quoteCard);
     });
   }
