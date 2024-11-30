@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const quoteText = document.getElementById("quote-text");
+  const quoteLoading = document.getElementById("quote__loading");
   const newQuoteBtn = document.getElementById("new-quote-btn");
   const saveQuoteBtn = document.getElementById("save-quote-btn");
   const savedQuotesList = document.getElementById("saved-quotes-list");
@@ -7,6 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentQuote = "";
 
   async function fetchQuote() {
+    quoteText.classList.add("hidden")
+    quoteLoading.classList.remove("hidden");
     try {
       const response = await fetch("https://api.adviceslip.com/advice");
       const data = await response.json();
@@ -38,6 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
     quoteText.textContent = `"${currentQuote.content}"`;
     quoteText.style.opacity = 0;
     setTimeout(() => {
+      quoteLoading.classList.add("hidden");
+      quoteText.classList.remove("hidden");
       quoteText.style.opacity = 1;
     }, 50);
   }
