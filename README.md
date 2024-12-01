@@ -4,11 +4,11 @@
 
 ## Índice
 
-- [Funcionalidades](#🚀-funcionalidades)
-- [Tecnologias Utilizadas](##🎨-tecnologias-utilizadas)
-- [Instalação](##🛠️-instalação)
-- [Contribuição](##🌈-contribuição)
-- [Licença](##📄-licença)
+- [Funcionalidades](#funcionalidades)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Instalação](#instalação)
+- [Contribuição](#contribuição)
+- [Licença](#licença)
 
 ## 🚀 Funcionalidades
 - Geração aleatória de frases motivacionais utilizando APIs.
