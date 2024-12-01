@@ -4,19 +4,19 @@
 
 ## Índice
 
-- [Funcionalidades](#🚀-funcionalidades)
+- [Funcionalidades](#funcionalidades)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Instalação](#instalação)
 - [Contribuição](#contribuição)
 - [Licença](#licença)
 
-## 🚀 Funcionalidades
+## Funcionalidades
 - Geração aleatória de frases motivacionais utilizando APIs.
 - Design moderno e minimalista com Tailwind CSS.
 - Frases com autoria destacada, quando disponível.
 - Interface responsiva para dispositivos móveis e desktops.
 
-## 🎨 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 - **HTML5**: Estrutura do site.
 - **Tailwind CSS**: Estilização rápida e eficiente.
 - **JavaScript**: Lógica para buscar frases de APIs e interatividade.
@@ -24,7 +24,7 @@
 - **API de Frases**: Conexão com o [Advice Slip JSON API](https://api.adviceslip.com) para obter frases dinâmicas.
 - **API de Tradução**: Conexão com o [MyMemory API](https://mymemory.translated.net/doc/spec.php) para tradução das frases.
 
-## 🛠️ Instalação
+## Instalação
 
 Se deseja rodar o projeto localmente, siga os passos abaixo:
 
@@ -46,7 +46,7 @@ Se deseja rodar o projeto localmente, siga os passos abaixo:
    open index.html
    ```
 
-## 🌈 Contribuições
+## Contribuições
 Contribuições são sempre bem-vindas! Se você tiver ideias para melhorar o projeto, fique à vontade para abrir uma **issue** ou enviar um **pull request**.
 
 ### Para contribuir:
@@ -73,5 +73,5 @@ Contribuições são sempre bem-vindas! Se você tiver ideias para melhorar o pr
 
 5. Abra um pull request.
 
-## 📄 Licença
+## Licença
 Este projeto está licenciado sob os termos da licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
