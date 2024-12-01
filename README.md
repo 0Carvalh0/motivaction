@@ -7,7 +7,7 @@
 - [Funcionalidades](#funcionalidades)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Instalação](#instalação)
-- [Contribuição](#contribuição)
+- [Contribuições](#contribuições)
 - [Licença](#licença)
 
 ## Funcionalidades
