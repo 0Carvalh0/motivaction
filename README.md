@@ -4,7 +4,7 @@
 
 ## Índice
 
-- [Funcionalidades](#funcionalidades)
+- [Funcionalidades](#🚀-funcionalidades)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Instalação](#instalação)
 - [Contribuição](#contribuição)
