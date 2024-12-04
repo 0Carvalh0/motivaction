@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentQuote = "";
 
   async function fetchQuote() {
-    quoteText.classList.add("hidden")
+    quoteText.classList.add("hidden");
     quoteLoading.classList.remove("hidden");
     try {
       const response = await fetch("https://api.adviceslip.com/advice");
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const data = await response.json();
       currentQuote = {
         content: data.responseData.translatedText,
-        _id: Date.now().toString(), // Use timestamp as a unique ID
+        _id: Date.now().toString(),
       };
       displayQuote();
     } catch (error) {
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const quoteCard = document.createElement("div");
       quoteCard.id = quote._id;
       quoteCard.className =
-        "bg-white flex items-center p-4 gap-4 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105";
+        "bg-white flex items-center justify-between p-4 gap-4 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105";
       quoteCard.innerHTML = `
       <p class="text-gray-700 mb-2">"${quote.content}"</p><button id="delete-quote-btn"><i class="fa-solid fa-trash"></i></button>
       `;
