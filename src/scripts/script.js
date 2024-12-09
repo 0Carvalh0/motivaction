@@ -3,8 +3,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const quoteLoading = document.getElementById("quote__loading");
   const newQuoteBtn = document.getElementById("new-quote-btn");
   const saveQuoteBtn = document.getElementById("save-quote-btn");
+  const noSavedQuotes = document.getElementById("no-saved-quotes");
   const savedQuotesList = document.getElementById("saved-quotes-list");
 
+  let savedQuotes = JSON.parse(localStorage.getItem("savedQuotes")) || [];
   let currentQuote = "";
 
   async function fetchQuote() {
@@ -49,7 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function saveQuote() {
     if (currentQuote) {
-      const savedQuotes = JSON.parse(localStorage.getItem("savedQuotes")) || [];
       if (!savedQuotes.some((quote) => quote._id === currentQuote._id)) {
         savedQuotes.push(currentQuote);
         localStorage.setItem("savedQuotes", JSON.stringify(savedQuotes));
@@ -63,7 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("click", (e) => {
     if (e.target.closest("#delete-quote-btn").id === "delete-quote-btn") {
       let deleteQuoteBtn = e.target.closest("#delete-quote-btn");
-      let savedQuotes = JSON.parse(localStorage.getItem("savedQuotes")) || [];
       let quoteId = deleteQuoteBtn.parentElement.id;
 
       savedQuotes = savedQuotes.filter((quote) => quote._id !== quoteId);
@@ -74,7 +74,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function displaySavedQuotes() {
-    const savedQuotes = JSON.parse(localStorage.getItem("savedQuotes")) || [];
     savedQuotesList.innerHTML = "";
     savedQuotes.forEach((quote) => {
       const quoteCard = document.createElement("div");
@@ -86,6 +85,16 @@ document.addEventListener("DOMContentLoaded", () => {
       `;
       savedQuotesList.appendChild(quoteCard);
     });
+
+    displayNoSavedQuotes();
+  }
+
+  function displayNoSavedQuotes() {
+    if (savedQuotes.length === 0) {
+      noSavedQuotes.classList.remove("hidden");
+    } else {
+      noSavedQuotes.classList.add("hidden");
+    }
   }
 
   newQuoteBtn.addEventListener("click", fetchQuote);
