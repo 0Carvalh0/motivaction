@@ -10,6 +10,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ["Inter", "sans-serif"],
+        logo: ["Staatliches", "serif"],
       },
     },
   },
