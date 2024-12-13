@@ -637,8 +637,16 @@ video {
   min-height: 100vh;
 }
 
+.w-32 {
+  width: 8rem;
+}
+
 .w-8 {
   width: 2rem;
+}
+
+.w-40 {
+  width: 10rem;
 }
 
 .max-w-3xl {
@@ -709,7 +717,7 @@ video {
 
 .border-t-primary {
   --tw-border-opacity: 1;
-  border-top-color: rgb(79 70 229 / var(--tw-border-opacity, 1));
+  border-top-color: rgb(10 34 57 / var(--tw-border-opacity, 1));
 }
 
 .bg-gray-50 {
@@ -719,12 +727,12 @@ video {
 
 .bg-primary {
   --tw-bg-opacity: 1;
-  background-color: rgb(79 70 229 / var(--tw-bg-opacity, 1));
+  background-color: rgb(10 34 57 / var(--tw-bg-opacity, 1));
 }
 
 .bg-secondary {
   --tw-bg-opacity: 1;
-  background-color: rgb(16 185 129 / var(--tw-bg-opacity, 1));
+  background-color: rgb(253 202 64 / var(--tw-bg-opacity, 1));
 }
 
 .bg-white {
@@ -737,13 +745,25 @@ video {
 }
 
 .from-background {
-  --tw-gradient-from: #F3F4F6 var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(243 244 246 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-from: #0A2239 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(10 34 57 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
 .to-gray-200 {
   --tw-gradient-to: #e5e7eb var(--tw-gradient-to-position);
+}
+
+.to-gray-800 {
+  --tw-gradient-to: #1f2937 var(--tw-gradient-to-position);
+}
+
+.to-gray-500 {
+  --tw-gradient-to: #6b7280 var(--tw-gradient-to-position);
+}
+
+.to-gray-700 {
+  --tw-gradient-to: #374151 var(--tw-gradient-to-position);
 }
 
 .p-4 {
@@ -782,10 +802,6 @@ video {
   padding-bottom: 2rem;
 }
 
-.text-center {
-  text-align: center;
-}
-
 .font-sans {
   font-family: Inter, sans-serif;
 }
@@ -798,11 +814,6 @@ video {
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
 }
 
 .font-bold {
@@ -826,6 +837,11 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.text-primary {
+  --tw-text-opacity: 1;
+  color: rgb(10 34 57 / var(--tw-text-opacity, 1));
 }
 
 .shadow-2xl {
