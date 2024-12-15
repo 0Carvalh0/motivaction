@@ -92,8 +92,12 @@ document.addEventListener("DOMContentLoaded", () => {
   function displayNoSavedQuotes() {
     if (savedQuotes.length === 0) {
       noSavedQuotes.classList.remove("hidden");
+      savedQuotesList.classList.remove("grid");
+      savedQuotesList.classList.add("hidden");
     } else {
       noSavedQuotes.classList.add("hidden");
+      savedQuotesList.classList.remove("hidden");
+      savedQuotesList.classList.add("grid");
     }
   }
 
